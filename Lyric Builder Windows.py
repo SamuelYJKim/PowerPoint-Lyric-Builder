@@ -144,6 +144,9 @@ while True:
 	    num += 1
 
     # save powerpoint to directory chosen by user
+    if pptx_name == '':
+        print("Error, powerpoint name not found. Naming to Default")
+        pptx_name = name + "_" + artist_found.name
     prs.save(file_location + '\\' + pptx_name + '.pptx')
     print("")
     print("Presentation completed.")
